@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jungian Dream Analysis Machine</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+
+</head>
+<body>
+    <main class="main_container">
+        <h1 class="title">Jungian Dream Analysis Machine</h1>
+        
+        <div class="container">
+            <div class="post_container">
+                <form method="POST" class="mx-auto col-md-8 col-lg-6">
+                    <div class="mb-3">
+                        <textarea name="prompt" rows="4" class="form-control" placeholder="Describe your dream..."></textarea>
+    
+                    <div class="d-grid">
+                        <input type="submit" value="Submit" class="btn btn-primary">
+                    </div>
+                </form>
+            </div>
+            
+            {% if result %}
+                <div class="result_output">
+                    <h3 class="mt-4">Dream Interpretation:</h3>
+                    <div class="alert alert-secondary">{{ result }}</div>
+                </div>
+                
+            {% endif %}
+            {% if image_url %}
+                <div class="result_output">
+                    <h3 class="mt-4">Visual Interpretation:</h3>
+                    <img src="{{ image_url }}" alt="Visual Interpretation" class="img">
+                </div>
+            {% endif %}
+        </div>
+    </main>
+    <footer><p id="footer_text">&copy; Cart 498 - Cathy Tham</p></footer>
+</body>
+</html>

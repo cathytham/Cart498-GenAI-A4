@@ -1,5 +1,5 @@
 # Jungian Dream Analysis Machine
-The Jungian Dream Analysis Machine is a web application that allow users to submit their dreams. Then, it will analyze it based on Carl Jung's analytical psychology principles. The application will generate both textual interpretations and visual representations of the submitted dream. 
+The Jungian Dream Analysis Machine is a web application that allows users to submit their dreams. It will analyze it based on Carl Jung's analytical psychology principles. The application will generate both textual interpretations and visual representations of the submitted dream. 
 
 ## Implementation
 I have implemented Jungias ideas into prompt by providing a detail description of the type of response we want, based on Carl Jung's psychological theories. It focuses on concepets like archetypes, the collective unconscious, and individuation. Initially, I experiemented with a less detail prompt but later decided to refined it to make sure it aligned closely with Jungian principles.
